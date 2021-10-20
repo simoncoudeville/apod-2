@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Astronomy Picture of the Day</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Newsreader:wght@400;700&family=Space+Grotesk:wght@400;700&family=Space+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./script/app.js"></script>
+</head>
+
+<body class="app">
+  <!-- <header class="app__header">
+    <h1 class="app__logo">
+      Astronomy Picture of the Day
+    </h1>
+  </header> -->
+  <main class="app__main">
+    <div class="app__loading js-loading">
+      <p>
+        Astronomy Picture of the Day...
+        <!-- Loading... -->
+      </p>
+    </div>
+    <div class="app__body js-content">
+      <div class="app__picture-navigation">
+        <button class="app__prev-button js-previous-day">
+          <svg class="app__prev-icon" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+        <figure class="app__picture">
+          <div class="app__picture-el js-picture">
+
+          </div>
+          <figcaption class="app__picture-caption">
+            <p class="app__meta u-meta js-date"></p>
+            <h2 class="app__title js-title"></h2>
+          </figcaption>
+        </figure>
+        <button class="app__next-button js-next-day">
+          <svg class="app__next-icon" width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </button>
+      </div>
+      <div class="app__content">
+        <p class="app__explanation js-explanation"></p>
+        <p class="app__copyright js-copy"></p>
+      </div>
+    </div>
+  </main>
+  <!-- <footer class="app__footer">
+    <p>
+      All data by <a class="meta-link"
+        href="https://data.nasa.gov/Space-Science/Astronomy-Picture-of-the-Day-API/ez2w-t8ua">NASA Open
+        Data</a>
+    </p>
+    <p>
+      A project by <a class="meta-link" href="https://simoncoudeville.be">Simon Coudeville</a>
+    </p>
+  </footer> -->
+</body>
+
+</html>
