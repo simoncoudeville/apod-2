@@ -6,17 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Astronomy Picture of the Day</title>
-
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.webmanifest">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=VT323&family=Xanh+Mono:ital@0;1&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/style.css">
   <script defer src="./script/app.js"></script>
 </head>
@@ -25,100 +21,35 @@
   <header class="app__header">
     <div class="app__intro">
       <h1 class="app__logo">
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M11.4563 2.66509C11.6717 2.2034 12.3283 2.2034 12.5437 2.66509L15.4077 8.80229C15.4673 8.93 15.57 9.03266 15.6977 9.09227L21.8349 11.9563C22.2966 12.1717 22.2966 12.8283 21.8349 13.0437L15.6977 15.9077C15.57 15.9673 15.4673 16.07 15.4077 16.1977L12.5437 22.3349C12.3283 22.7966 11.6717 22.7966 11.4563 22.3349L8.59227 16.1977C8.53266 16.07 8.43 15.9673 8.30229 15.9077L2.16509 13.0437C1.7034 12.8283 1.7034 12.1717 2.16509 11.9563L8.30229 9.09227C8.43 9.03266 8.53266 8.93 8.59227 8.80229L11.4563 2.66509Z"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
+        <!-- ✳
+        ✴
+        ✦ -->
         Astronomy Picture of the Day
       </h1>
-      <p class="app__meta js-date"></p>
+      <p class="app__date js-date"></p>
     </div>
     <div class="app__navigation">
       <button class="app__button app__button--prev js-previous-day">
-        <!-- &larr;  -->
-        <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M15 6L9 12L15 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-        Previous day
-      </button>
-      <button class="app__button app__button--next js-next-day">
-        Next day
-        <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M9 6L15 12L9 18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-        <!-- &rarr; -->
+        < <span>Previous day</span>
       </button>
       <button class="app__button app__button--today js-today">
-
-        <!-- refresh arrow -->
-        <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M21.8883 13.5C21.1645 18.3113 17.013 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C16.1006 2 19.6248 4.46819 21.1679 8"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M17 8H21.4C21.7314 8 22 7.73137 22 7.4V3" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" />
-        </svg>
-
-        <!-- special back arrow -->
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 9.5C15.5 9.5 12.5 9.5 9 9.5C8.83847 9.5 5 9.5 5 13.5C5 18 8.70237 18 9 18C12 18 14 18 17 18"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M15.5 13C16.8668 11.6332 17.6332 10.8668 19 9.5C17.6332 8.13317 16.8668 7.36683 15.5 6"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-
-        <!-- double back arrows -->
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M7 8L10.5 11.5L7 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M13 8L16.5 11.5L13 15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-
-        <!-- cirlce -->
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
-            stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-
-        <!-- back arrow -->
-        <!-- <svg width="24" height="24" stroke-width="1.5" viewBox="0 0 24 24" fill="none"
-          xmlns="http://www.w3.org/2000/svg">
-          <path d="M13.25 4.75L16.75 8.25L13.25 11.75" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" />
-          <path d="M16.75 8.25L10.75 8.25C8.54086 8.25 6.75 10.0409 6.75 12.25L6.75 19.25" stroke="currentColor"
-            stroke-linecap="round" stroke-linejoin="round" />
-        </svg> -->
-        Today
+        <span>Today</span>
+      </button>
+      <button class="app__button app__button--next js-next-day">
+        <span>Next day</span> >
       </button>
     </div>
   </header>
   <main class="app__main">
     <div class="app__loading js-loading">
       Loading...
+      <!-- Loading&hellip; -->
     </div>
     <div class="app__content js-content">
-      <figure class="app__figure">
-        <div class="app__picture js-picture">
+      <figure class="app__figure js-figure">
+        <!-- <div class="app__picture ">
 
-        </div>
+        </div> -->
       </figure>
       <div class="app__body js-body">
         <div class="app__info">

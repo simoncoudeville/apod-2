@@ -1,8 +1,8 @@
-const api_url = 'https://api.nasa.gov/planetary/apod?api_key=eZ4aOutFSQ3iQuTHHK4LaReFfNxc0RgcJAsSeBOt&';
+const api_url = 'https://api.nasa.gov/planetary/apod?api_key=eZ4aOutFSQ3iQuTHHK4LaReFfNxc0RgcJAsSeBOt&thumbs=true&';
 
 let appEl = document.querySelector('.js-app');
 let titleEl = document.querySelector('.js-title');
-let pictureEl = document.querySelector('.js-picture');
+let pictureEl = document.querySelector('.js-figure');
 let dateEl = document.querySelector('.js-date');
 let copyEl = document.querySelector('.js-copy');
 let explanationEl = document.querySelector('.js-explanation');
@@ -96,13 +96,12 @@ function scrollImage() {
 
 function show(data) {
   checkToday();
+  console.log(data);
 
   if (data.media_type === 'video') {
     hideloader(scrollImage);
     pictureEl.innerHTML = `
-    <div class="app__video">
-      <iframe class="app__player" src="${data.url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+      <iframe width="320" height="180" class="app__player" src="${data.url}" title="video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    
     `;
   } else {
     picture.src = data.url;
