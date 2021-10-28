@@ -97,6 +97,7 @@ select {
 
 html {
   font-size: 87.5%;
+  /* font-size: 93.75%; */
   font-family: var(--global-page-fontFamily);
   font-weight: var(--global-font-weight-normal);
   line-height: 1.5;  
@@ -117,8 +118,8 @@ button:focus-visible {
   border-radius: 2rem;
 }
 
-.app {   
-  --app-header-height: calc(var(--global-whitespase-base) * 2 + var(--global-whitespase-m));
+.app {     
+  --app-header-height: calc(var(--global-whitespase-base) * 2 + var(--global-whitespase-m) * 2);
   --app-picture-height: calc(100vh - var(--app-header-height) * 2); 
   min-height: 100vh;
   display: flex;
@@ -182,6 +183,7 @@ button:focus-visible {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: var(--app-picture-height);    
 }
 
 .app__player {
@@ -261,6 +263,10 @@ button:focus-visible {
     font-size: 100%;
   }
 
+  .app {
+    --app-header-height: calc(var(--global-whitespase-base) * 2 + var(--global-whitespase-m));
+  }
+
   .app__header {
     position: sticky;
     top: 0;
@@ -275,8 +281,7 @@ button:focus-visible {
   .app__figure {
     --app-picture-opacity: calc(var(--scrollDifference) / 1.25);
     --app-picture-scale: calc(var(--scrollDifference) / 20);
-    will-change: opacity, transform;
-    height: var(--app-picture-height);    
+    will-change: opacity, transform;    
     position: sticky;
     top: calc(var(--app-header-height));
     opacity: calc( 1 - var(--app-picture-opacity));
