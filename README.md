@@ -6,6 +6,7 @@ Check it out on <https://apod.simoncoudeville.be/>
 
 ## Todo
 * Fix Loading element below viewport bug on mobile
+* Browser testing
 * ~~Add custom domain~~
 * ~~Add web manifest stuff~~
 * Add some animations with <https://motion.dev/>
