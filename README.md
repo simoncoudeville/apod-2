@@ -1,6 +1,6 @@
 # apod
 
-Personal project to practice my javascript skills. All data NASA Open Data.
+Personal project to practice my javascript skills. All data by NASA Open Data.
 
 ## Todo
 * Fix Loading bug on mobile
