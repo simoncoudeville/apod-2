@@ -7,6 +7,8 @@ Check it out on <https://apod.simoncoudeville.be/>
 ## Todo
 * Fix Loading element below viewport bug on mobile
 * Browser testing
+* Add og stuff
+* Redesign inspiration: <https://www.are.na/block/8358499>
 * ~~Add custom domain~~
 * ~~Add web manifest stuff~~
 * Add some animations with <https://motion.dev/>
