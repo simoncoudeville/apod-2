@@ -3,7 +3,8 @@
     "short_name": "APOD",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#fff",
+    "background_color": "#f3f3fc",
+	"theme_color": "#f3f3fc",
     "description": "Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
     "icons": [
         { "src": "./icon-192.png", "type": "image/png", "sizes": "192x192" },
