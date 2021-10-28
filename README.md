@@ -1,4 +1,4 @@
-# apod
+# APOD
 
 Personal project to practice my javascript skills. All data by NASA Open Data.
 
