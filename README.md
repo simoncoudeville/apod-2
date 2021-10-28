@@ -5,5 +5,5 @@ Personal project to practice my javascript skills. All data NASA Open Data.
 ## Todo
 * Fix Loading bug on mobile
 * Add custom domain
-* Maybe add pwa stuff
+* ~~Add web manifest stuff~~
 * Maybe add some animations
