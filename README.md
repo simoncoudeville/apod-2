@@ -8,4 +8,5 @@ Check it out on <https://apod.simoncoudeville.be/>
 * Fix Loading element below viewport bug on mobile
 * ~~Add custom domain~~
 * ~~Add web manifest stuff~~
-* Maybe add some animations
+* Add some animations
+* Do something with native dates: <https://elijahmanor.com/blog/format-js-dates-and-times>
