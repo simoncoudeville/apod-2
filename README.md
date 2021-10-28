@@ -2,6 +2,8 @@
 
 Personal project to practice my javascript skills. All data by Astronomy Picture of the Day Api by NASA Open Data.
 
+Check it out on <https://apod.simoncoudeville.be/>
+
 ## Todo
 * Fix Loading element below viewport bug on mobile
 * ~~Add custom domain~~
