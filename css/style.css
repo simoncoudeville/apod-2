@@ -149,6 +149,7 @@ button:focus-visible {
   display: inline-flex;
   align-items: center;
   gap: var(--global-whitespase-xs);
+  text-transform: uppercase;
 }
 
 .app__date {
