@@ -14,17 +14,11 @@ let todayButtonEl = document.querySelector('.js-today');
 let picture = new Image();
 
 const today = new Date();
-const todayDay = today.getDate();
-const todayMonth = today.getMonth() + 1;
-const todayYear = today.getFullYear();
-const todayDate = todayYear + '-' + todayMonth + '-' + todayDay;
+const todayDateString = today.toDateString();
 
 const yesterday = new Date(today);
 yesterday.setDate(yesterday.getDate() - 1);
-const yesterdayDay = yesterday.getDate();
-const yesterdayMonth = yesterday.getMonth() + 1;
-const yesterdayYear = yesterday.getFullYear();
-const yesterdayDate = yesterdayYear + '-' + yesterdayMonth + '-' + yesterdayDay;
+const yesterdayDateString = yesterday.toDateString();
 
 let date = new Date();
 let dateDay = '';
@@ -37,7 +31,7 @@ function setPictureDate() {
   dateMonth = date.getMonth() + 1;
   dateYear = date.getFullYear();
   pictureDate = dateYear + '-' + dateMonth + '-' + dateDay;
-  pictureDateFormat = date.toDateString();
+  pictureDateString = date.toDateString();
 }
 
 setPictureDate();
@@ -71,10 +65,10 @@ function showloader() {
 }
 
 function checkToday() {
-  if (pictureDate === todayDate) {
+  if (pictureDateString === todayDateString) {
     appEl.classList.add('is-today');
     appEl.classList.remove('is-yesterday');
-  } else if (pictureDate === yesterdayDate) {
+  } else if (pictureDateString === yesterdayDateString) {
     appEl.classList.add('is-yesterday');
     appEl.classList.remove('is-today');
   } else {
@@ -96,7 +90,6 @@ function scrollImage() {
 
 function show(data) {
   checkToday();
-  console.log(data);
 
   if (data.media_type === 'video') {
     hideloader(scrollImage);
@@ -115,7 +108,7 @@ function show(data) {
 
   titleEl.innerHTML = data.title;
   explanationEl.innerHTML = data.explanation;
-  dateEl.innerHTML = pictureDateFormat;
+  dateEl.innerHTML = pictureDateString;
 
   if (data.copyright) {
     copyEl.innerHTML = `Image credit: ${data.copyright}`;
@@ -143,6 +136,8 @@ nextButtonEl.addEventListener('click', function () {
 
 todayButtonEl.addEventListener('click', function () {
   date.setDate(today.getDate());
+  date.setMonth(today.getMonth());
+  date.setFullYear(today.getFullYear());
   setPictureDate();
   checkToday();
   showloader();
