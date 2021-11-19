@@ -8,6 +8,7 @@ Check it out on <https://apod.simoncoudeville.be/>
 * Fix Loading element below viewport bug on mobile
 * Browser testing
 * Add og stuff
+* Set background to primary color from if possible
 * Redesign inspiration: <https://www.are.na/block/8358499>
 * ~~Add custom domain~~
 * ~~Add web manifest stuff~~
