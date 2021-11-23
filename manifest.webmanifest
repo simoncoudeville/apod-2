@@ -1,7 +1,8 @@
 {
     "name": "Astronomy Picture of the Day",
     "short_name": "APOD",
-    "start_url": ".",
+    "start_url": "/",
+    "scope": "/",
     "display": "standalone",
     "background_color": "#f3f3fc",
 	"theme_color": "#f3f3fc",
