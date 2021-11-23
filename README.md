@@ -8,6 +8,8 @@ Check it out on <https://apod.simoncoudeville.be/>
 * Fix Loading element below viewport bug on mobile
 * Browser testing
 * Add og stuff
+* Add error message if API call fails <https://github.com/melanierichards/what-to-draw/blob/main/site/script.js>
+* Set background to primary color from if possible
 * Redesign inspiration: <https://www.are.na/block/8358499>
 * ~~Add custom domain~~
 * ~~Add web manifest stuff~~
