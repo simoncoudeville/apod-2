@@ -68,6 +68,7 @@ select {
   --global-page-bgColor: var(--global-color-neutral-100);
   --global-heading-color: var(--global-color-neutral-900);
   --global-meta-color: var(--global-color-neutral-500);
+  --global-disabled-color: var(--global-color-neutral-400);
   --global-border-color: var(--global-color-neutral-200);
   --global-surface-color: var(--global-color-neutral-100);
   
@@ -92,6 +93,7 @@ select {
     --global-page-bgColor: var(--global-color-neutral-900);
     --global-border-color: var(--global-color-neutral-800);
     --global-surface-color: var(--global-color-neutral-800);
+    --global-disabled-color: var(--global-color-neutral-600);
   }
 }
 
@@ -131,6 +133,7 @@ button:focus-visible {
   display: flex;
   flex-wrap: wrap;
   gap: var(--global-whitespase-base);
+  justify-content: space-between;
 }
 
 .app__date {
@@ -142,6 +145,11 @@ button:focus-visible {
   display: flex;
   gap: var(--global-whitespase-base);
 }
+
+/* .app__navigation {
+  flex-grow: 1;
+  justify-content: center;
+} */
 
 .app__logo {
   font-weight: var(--global-font-weight-normal);
@@ -165,6 +173,12 @@ button:focus-visible {
 
 .app__button:active {
   transform: translateY(1px);
+}
+
+.app__button:disabled {
+  color: var(--global-disabled-color);
+  transform: none;
+  cursor: text;
 }
 
 .app__button svg {
@@ -237,11 +251,11 @@ button:focus-visible {
   font-style: italic;
 }
 
-.is-today .app__button--next,
+/* .is-today .app__button--next,
 .is-today .app__button--today,
 .is-yesterday .app__button--next {
   display: none;
-}
+} */
 
 .is-starting .app__loading,
 .is-loading .app__loading {
@@ -254,6 +268,12 @@ button:focus-visible {
 .is-loading .app__content {
   display: none;
 }
+
+/* @media (min-width: 40em) { 
+  .app__navigation {
+    justify-content: end;
+  }
+} */
 
 @media (min-width: 55em) {
   :root {
@@ -273,11 +293,11 @@ button:focus-visible {
     top: 0;
     flex-direction: row;
   }
-
+/* 
   .app__intro,
   .app__navigation {
     flex-grow: 0;
-  }
+  } */
   
   .app__figure {
     --app-picture-opacity: calc(var(--scrollDifference) / 1.25);
@@ -288,5 +308,12 @@ button:focus-visible {
     opacity: calc( 1 - var(--app-picture-opacity));
     transform: scale(calc(1 - var(--app-picture-scale)));
     z-index: 10;
+  }
+}
+
+@media (min-width: 80em) {
+  .app__header {
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) auto 1fr;
   }
 }
