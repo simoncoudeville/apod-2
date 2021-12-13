@@ -8,7 +8,7 @@
 	"theme_color": "#f3f3fc",
     "description": "Discover the cosmos! Each day a different image or photograph of our fascinating universe is featured, along with a brief explanation written by a professional astronomer.",
     "icons": [
-        { "src": "./icon-192-maskable.png", "type": "image/png", "sizes": "192x192" },
+        { "src": "./icon-192-maskable.png", "type": "image/png", "sizes": "192x192", "purpose": "maskable" },
         { "src": "./icon-192.png", "type": "image/png", "sizes": "192x192" },
         { "src": "./icon-512.png", "type": "image/png", "sizes": "512x512" }
     ]
