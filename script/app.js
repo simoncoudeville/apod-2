@@ -68,11 +68,16 @@ function checkToday() {
   if (pictureDateString === todayDateString) {
     appEl.classList.add('is-today');
     appEl.classList.remove('is-yesterday');
+    todayButtonEl.setAttribute('disabled', true);
+    nextButtonEl.setAttribute('disabled', true);
   } else if (pictureDateString === yesterdayDateString) {
     appEl.classList.add('is-yesterday');
     appEl.classList.remove('is-today');
+    todayButtonEl.removeAttribute('disabled');
+    nextButtonEl.setAttribute('disabled', true);
   } else {
     appEl.classList.remove('is-yesterday', 'is-today');
+    nextButtonEl.removeAttribute('disabled');
   }
 }
 
