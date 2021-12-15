@@ -10,7 +10,7 @@ let loadingEl = document.querySelector('.js-loading');
 let contentEl = document.querySelector('.js-content');
 let previousButtonEl = document.querySelector('.js-previous-day');
 let nextButtonEl = document.querySelector('.js-next-day');
-let todayButtonEl = document.querySelector('.js-today');
+// let todayButtonEl = document.querySelector('.js-today');
 let picture = new Image();
 
 const today = new Date();
@@ -68,12 +68,6 @@ function checkToday() {
   if (pictureDateString === todayDateString) {
     appEl.classList.add('is-today');
     appEl.classList.remove('is-yesterday');
-    todayButtonEl.setAttribute('disabled', true);
-    nextButtonEl.setAttribute('disabled', true);
-  } else if (pictureDateString === yesterdayDateString) {
-    appEl.classList.add('is-yesterday');
-    appEl.classList.remove('is-today');
-    todayButtonEl.removeAttribute('disabled');
     nextButtonEl.setAttribute('disabled', true);
   } else {
     appEl.classList.remove('is-yesterday', 'is-today');
@@ -126,7 +120,7 @@ function show(data) {
 previousButtonEl.addEventListener('click', function () {
   date.setDate(date.getDate() - 1);
   setPictureDate();
-  checkToday();
+  // checkToday();
   showloader();
   getapi(api_url, pictureDate);
 });
@@ -134,17 +128,7 @@ previousButtonEl.addEventListener('click', function () {
 nextButtonEl.addEventListener('click', function () {
   date.setDate(date.getDate() + 1);
   setPictureDate();
-  checkToday();
-  showloader();
-  getapi(api_url, pictureDate);
-});
-
-todayButtonEl.addEventListener('click', function () {
-  date.setDate(today.getDate());
-  date.setMonth(today.getMonth());
-  date.setFullYear(today.getFullYear());
-  setPictureDate();
-  checkToday();
+  // checkToday();
   showloader();
   getapi(api_url, pictureDate);
 });
