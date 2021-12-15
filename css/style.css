@@ -17,6 +17,8 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-size: inherit;
+  font-weight: normal;
 }
 
 /* Set core root defaults */
@@ -120,6 +122,10 @@ button:focus-visible {
   border-radius: 2rem;
 }
 
+h1 {
+  font-style: italic;
+}
+
 .app {     
   --app-header-height: calc(var(--global-whitespase-base) * 3 + var(--global-whitespase-m) * 2);
   --app-picture-height: calc(100vh - var(--app-header-height) - var(--global-whitespase-base) * 3); 
@@ -156,6 +162,7 @@ button:focus-visible {
 .app__logo {
   font-weight: var(--global-font-weight-normal);
   font-size: 1rem;  
+  font-style: normal;
   display: inline-flex;
   align-items: center;
   gap: var(--global-whitespase-xs);
@@ -196,6 +203,15 @@ button:focus-visible {
   flex-grow: 1;
   position: relative;
   z-index: 10;
+}
+
+.app__main--page {
+  justify-content: center;
+  align-items: center;
+}
+
+.app__page {
+  padding-top: var(--global-whitespase-base);
 }
 
 .app__figure {  
@@ -287,6 +303,17 @@ button:focus-visible {
     justify-content: end;
   }
 } */
+
+.app__page {
+  max-width: 36em;
+  display: grid;
+  gap: var(--global-whitespase-base);
+}
+
+.app__back {
+  text-decoration: none;
+  color: inherit;
+}
 
 @media (min-width: 35.875em) {
   .app__intro,
