@@ -17,6 +17,8 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-size: inherit;
+  font-weight: normal;
 }
 
 /* Set core root defaults */
@@ -120,9 +122,13 @@ button:focus-visible {
   border-radius: 2rem;
 }
 
+h1 {
+  font-style: italic;
+}
+
 .app {     
-  --app-header-height: calc(var(--global-whitespase-base) * 2 + var(--global-whitespase-m) * 2);
-  --app-picture-height: calc(100vh - var(--app-header-height) * 2); 
+  --app-header-height: calc(var(--global-whitespase-base) * 3 + var(--global-whitespase-m) * 2);
+  --app-picture-height: calc(100vh - var(--app-header-height) - var(--global-whitespase-base) * 3); 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -134,6 +140,11 @@ button:focus-visible {
   flex-wrap: wrap;
   gap: var(--global-whitespase-base);
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: var(--global-page-bgColor);
+  z-index: 20;
+  box-shadow: 0 0 var(--global-whitespase-base) var(--global-whitespase-base) var(--global-page-bgColor);
 }
 
 .app__date {
@@ -144,16 +155,14 @@ button:focus-visible {
 .app__navigation {
   display: flex;
   gap: var(--global-whitespase-base);
+  justify-content: space-between;
+  flex-grow: 1; 
 }
-
-/* .app__navigation {
-  flex-grow: 1;
-  justify-content: center;
-} */
 
 .app__logo {
   font-weight: var(--global-font-weight-normal);
   font-size: 1rem;  
+  font-style: normal;
   display: inline-flex;
   align-items: center;
   gap: var(--global-whitespase-xs);
@@ -192,6 +201,17 @@ button:focus-visible {
   flex-direction: column;  
   justify-content: flex-end;
   flex-grow: 1;
+  position: relative;
+  z-index: 10;
+}
+
+.app__main--page {
+  justify-content: center;
+  align-items: center;
+}
+
+.app__page {
+  padding-top: var(--global-whitespase-base);
 }
 
 .app__figure {  
@@ -199,6 +219,17 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: var(--app-picture-height);    
+}
+
+.app__figure {
+  --app-picture-opacity: calc(var(--scrollDifference) / 1.125);
+  --app-picture-scale: calc(var(--scrollDifference) / 20);
+  will-change: opacity, transform;    
+  position: sticky;
+  top: calc(var(--app-header-height));
+  opacity: calc( 1 - var(--app-picture-opacity));
+  /* transform: scale(calc(1 - var(--app-picture-scale))); */
+  z-index: 10;
 }
 
 .app__player {
@@ -237,13 +268,11 @@ button:focus-visible {
 
 .app__footer {
   margin-top: var(--global-whitespase-l);  
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 var(--global-whitespase-base);
 }
 
 .app__footer a {
   color: inherit;
+  text-decoration: none;
 }
 
 .app__loading {
@@ -275,6 +304,29 @@ button:focus-visible {
   }
 } */
 
+.app__page {
+  max-width: 36em;
+  display: grid;
+  gap: var(--global-whitespase-base);
+}
+
+.app__back {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 35.875em) {
+  .app__intro,
+  .app__navigation {
+    justify-content: start;
+    flex-grow: unset;
+  }
+
+  .app__header {
+    justify-content: start;
+  }
+}
+
 @media (min-width: 55em) {
   :root {
     --global-whitespase-base: calc(var(--global-baseline) * 5);
@@ -289,17 +341,16 @@ button:focus-visible {
   }
 
   .app__header {
-    position: sticky;
-    top: 0;
-    flex-direction: row;
+    /* position: sticky;
+    top: 0; */
+    z-index: 5;
   }
-/* 
-  .app__intro,
-  .app__navigation {
-    flex-grow: 0;
-  } */
+
+  .app {
+    --app-picture-height: calc(100vh - var(--app-header-height) - var(--global-whitespase-base) * 2.5); 
+  }
   
-  .app__figure {
+  /* .app__figure {
     --app-picture-opacity: calc(var(--scrollDifference) / 1.25);
     --app-picture-scale: calc(var(--scrollDifference) / 20);
     will-change: opacity, transform;    
@@ -308,12 +359,21 @@ button:focus-visible {
     opacity: calc( 1 - var(--app-picture-opacity));
     transform: scale(calc(1 - var(--app-picture-scale)));
     z-index: 10;
+  } */
+
+
+  .app__footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: var(--global-whitespase-base);
+    z-index: 30;
   }
 }
-
+/* 
 @media (min-width: 80em) {
   .app__header {
     display: grid;
     grid-template-columns: minmax(min-content, 1fr) auto 1fr;
   }
-}
+} */
