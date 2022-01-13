@@ -144,7 +144,6 @@ h1 {
   top: 0;
   background-color: var(--global-page-bgColor);
   z-index: 20;
-  box-shadow: 0 0 var(--global-whitespase-base) var(--global-whitespase-base) var(--global-page-bgColor);
 }
 
 .app__date {
@@ -338,12 +337,6 @@ h1 {
 
   .app {
     --app-header-height: calc(var(--global-whitespase-base) * 2 + var(--global-whitespase-m));
-  }
-
-  .app__header {
-    /* position: sticky;
-    top: 0; */
-    z-index: 5;
   }
 
   .app {
